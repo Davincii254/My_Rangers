@@ -1,0 +1,2 @@
+DROP DATABASE wildlife_trackers;
+DROP DATABASE wildlife_tracker_tests;

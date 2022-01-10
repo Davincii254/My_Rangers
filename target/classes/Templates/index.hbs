@@ -1,0 +1,34 @@
+{{#partial "content"}}
+    <div class="container">
+        {{#if allsightings}}
+            {{#each allsightings}}
+                <div class="card text-center mt-5">
+                    <div class="card-header">
+                        Sighted By: {{rangerName}}
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Sighting Location: {{location}}</h5>
+
+                        {{#each animalsInSighting}}
+
+                            <p class="card-text">Animal Name:  {{animalName}}</p>
+                            <p>Animal Age: {{animalAge}}</p>
+                            <p>Animal Health:  {{health}}</p>
+                        {{/each}}
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Sighted at {{sightingTime}}
+                    </div>
+                </div>
+
+
+            {{/each}}
+
+        {{else}}
+            <p>Record a new sighting.</p>
+            <a href="/sighting/new">Record</a>
+        {{/if}}
+    </div>
+{{/partial}}
+{{> "layout.hbs"}}
